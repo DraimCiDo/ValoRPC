@@ -7,19 +7,18 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-
+  build_linux:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
-
-    - name: Package Application
-      uses: JackMcKew/pyinstaller-action-linux@main
+    - name: Test Build Python Exe
+      uses: eric2788/pyinstaller-build@master
       with:
-        path: vrpc --icon=favicon.ico --name="ValoRPC" --noconsole --noconfirm --add-data "info.json;." --add-data "Tesseract-OCR;Tesseract-OCR" --add-data "favicon.ico;." --add-data "ValoRPC Web Downloader.exe;."
-
-    - uses: actions/upload-artifact@v2
+        main: vrpc
+        artifact: Program
+        use-dependencies: false
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
       with:
-        name: name-of-artifact
-        path: /dist/update_ifp_f.py
+        name: python_exe
+        path: dist
