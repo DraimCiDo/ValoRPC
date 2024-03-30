@@ -1,21 +1,25 @@
-name: Python Package using Conda
+name: Package Application with Pyinstaller
 
-on: [push]
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
-  build-linux:
+  build:
+
     runs-on: ubuntu-latest
-    strategy:
-      max-parallel: 5
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v3
+    - uses: actions/checkout@v2
+
+    - name: Package Application
+      uses: JackMcKew/pyinstaller-action-linux@main
       with:
-        python-version: '3.10'
-    - name: PyInstaller Action
-      uses: Martin005/pyinstaller-action@v1.2.0
-    - name: craete build
-      run: pyinstaller vrpc.py --icon=favicon.ico --name="ValoRPC" --noconsole --noconfirm --add-data "info.json;." --add-data "Tesseract-OCR;Tesseract-OCR" --add-data "favicon.ico;." --add-data "ValoRPC Web Downloader.exe;."
-            
+        path: /build.bat
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: name-of-artifact
+        path: /dist/update_ifp_f.py
