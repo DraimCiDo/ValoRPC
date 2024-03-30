@@ -1,21 +1,21 @@
 
 # ValoRPC
 
-Discord rich presence for Valorant.
+Показ подробной информации в Discord об вашей игре Valorant.
 
-Displays a fancy status under your Discord profile through Discord's rich presence feature about your Valorant game/status, through a combination of screen reading with [Google's optical character recognition](https://github.com/tesseract-ocr/tesseract) and Valorant's internal API. Don't worry, this won't touch the Valorant process's memory at all :)
+Отображает статус в вашем профиле Discord через функционал самого Дискорда о вашей игре/статусе в Valorant, используя комбинацию чтения с экрана с помощью [оптического распознавания символов Google](https://github.com/tesseract-ocr/tesseract) и внутреннего API Valorant. Не волнуйтесь, это никак не повлияет на память процесса Valorant :)
 
-## NOTE
+## ПРИМЕЧАНИЕ
 
-- Please go to Discord settings -> Activity Settings -> Activity Privacy -> Display current activity as a status message. -> Enabled, for any rich presences to be shown under your profile.
-- As this program heavily relies on its screen reading ability, it has not been yet tested on any resolutions other than 1920x1080, 16:9 for Valorant windowed fullscreen/fullscreen. This means that this program cannot guarantee that it will function with screen resolutions of other than this tested size.
+- Пожалуйста, перейдите в Настройки Discord -> Настройки активности -> Приватность активности -> Отображать текущую активность в виде сообщения о статусе. -> Включено
+- Поскольку эта программа в значительной степени полагается на способность чтения с экрана, она еще не тестировалась на разрешениях, отличных от 1920x1080, 16:9 для Valorant windowed fullscreen/fullscreen. Это означает, что программа не может гарантировать, что она будет работать с разрешениями экрана, которое отличается от протестированного размера.
 
-## Features
+## Особенности
 
-- Standard, swiftplay, replication, and deathmatch gamemodes are supported
-- Escalation, spike rush, snowball gamemode rpc are not fully supported yet. Only a basic rpc will be displayed.
+- Поддерживаются стандартный режимы, быстрая игра, репликация и бой на смерть.
+- Эскалация, спайк-раш  пока не полностью поддерживают rpc в игровых режимах. Будет отображаться только базовый rpc.
 
-## Screenshots
+## Скриншоты
 
 ![Standard](https://i.imgur.com/xvllLWJ.png)
 ![Deathmatch](https://i.imgur.com/nOzcMHF.png)
@@ -23,15 +23,15 @@ Displays a fancy status under your Discord profile through Discord's rich presen
 ![Competitive](https://i.imgur.com/v6CKH5Z.png)
 ![Idling](https://i.imgur.com/TNmCBfK.png)
 
-## Installation
+## Установка
 
-Download the exe file from the [latest release](https://github.com/PenguinDevs/ValoRPC/releases/latest) and then run the file.
+Загрузите exe-файл с [последнии релизы](https://github.com/PenguinDevs/ValoRPC/releases/latest), а затем запустите файл.
 
-Note that windows will by default block the application from running, responding with a message 'Microsoft Defender SmartScreen prevented an unrecognized app from starting...' This is because the application is unsigned like many other open source executables out there on the internet. This project is therefore open source for not only contributions/forks, but for you to trust the source code of this application-- although the code is indeed arguably quite a mess.
+Обратите внимание, что по умолчанию windows блокирует запуск приложения, выдавая сообщение "Microsoft Defender SmartScreen предотвратил запуск нераспознанного приложения...". Это происходит потому, что приложение не подписано, как и многие другие исполняемые файлы с открытым исходным кодом в интернете. Поэтому этот проект является открытым не только для вклада/исправления, но и для того, чтобы вы могли доверять исходному коду этого приложения - хотя код действительно довольно запутанный.
 
-If you trust that my project is free from malware, go ahead and click 'more info' and then 'Run anyways'.
+Если вы уверены, что мой проект не содержит вредоносных программ, нажмите "Подробнее", а затем "Запустить в любом случае".
 
-## Acknowledgements
+## Благодарность
 
  - [Colinhartigan's Python Valclient](https://github.com/colinhartigan/valclient.py)
  - [Techchrism's Valorant API docs](https://github.com/techchrism/valorant-api-docs)
