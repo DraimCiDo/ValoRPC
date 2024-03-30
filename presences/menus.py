@@ -27,7 +27,7 @@ class MenusPresence(BasePresence):
                         presence_data['queueId']
          status['state'] = f'{queue_type.capitalize()} | In Party'
       status['large_image'] = 'default'
-      status['large_text'] = 'ValoRPC'
+      status['large_text'] = 'Valorant'
       # status['small_image'] = 'home'
       # status['small_text'] = state
       if user_status == 'Idle':

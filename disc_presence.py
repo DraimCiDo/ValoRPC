@@ -4,7 +4,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-client_id = 721690501379522600
+client_id = 388646660051304448
 
 class Presence:
    def __init__(self) -> None:
@@ -18,7 +18,7 @@ class Presence:
       self._prev_status = {}
 
    def update(self, status: dict) -> None:
-      status['buttons'] = [{'label': 'Download from GitHub', 'url': 'https://github.com/PenguinDevs/ValoRPC/releases/latest'}]
+      status['buttons'] = [{'label': 'Valorant Tracker', 'url': 'https://tracker.gg/valorant/profile/riot/Souta%23Danya/overview'}]
       self.status = status
       self.__check_changed()
 
