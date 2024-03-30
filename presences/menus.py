@@ -19,13 +19,13 @@ class MenusPresence(BasePresence):
       status = {}
       status['details'] = user_status == 'Idle' and user_status or f'{state}'
       if state == 'Настройка пользовательской игры':
-         status['state'] = f'In Party'
+         status['state'] = f'В Пати'
          queue_type = None
       else:
          queue_type =   (presence_data['queueId'] == 'ggteam' and 'escalation') or\
                         (presence_data['queueId'] == 'onefa' and 'replication') or\
                         presence_data['queueId']
-         status['state'] = f'{queue_type.capitalize()} | In Party'
+         status['state'] = f'{queue_type.capitalize()} | В Пати'
       status['large_image'] = 'default'
       status['large_text'] = 'Valorant'
       # status['small_image'] = 'home'
